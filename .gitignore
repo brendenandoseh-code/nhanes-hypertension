@@ -1,0 +1,9 @@
+# Jupyter autosave / cache
+.ipynb_checkpoints/
+__pycache__/
+*.pyc
+
+# Raw NHANES data is not distributed with this repo — download from the sources in README.md
+*.csv
+*.xpt
+*.sas7bdat
