@@ -23,15 +23,15 @@ Nine NHANES 2017–March 2020 files merged into one analytic dataset of **7,921 
 
 ## Key findings *(real NHANES figures)*
 
-**1. Vigorous activity is the standout modifiable factor.** The crude 23-point activity gap shrinks once age is accounted for, but a real, significant protective association remains — **OR ≈ 0.74** (95% CI 0.65–0.84, *p* < .001).
+**1. Vigorous activity is the standout modifiable factor.** The crude 23-point activity gap shrinks once age is accounted for, but a real, significant association with lower odds remains — **OR ≈ 0.74** (95% CI 0.65–0.84, *p* < .001) in the age- and sex-adjusted **unweighted** model; the survey-weighted Python model and R's design-based model both put it at **≈ 0.68** (see finding 4).
 
-**2. What survives age-adjustment vs. what doesn't.**
+**2. What survives age-adjustment vs. what doesn't.** *(unweighted, age/sex-adjusted model)*
 
 | Factor | Adjusted odds ratio | Verdict |
 |---|---|---|
-| Vigorous activity | **0.74** (0.65–0.84) | Protective — most robust modifiable finding |
-| Trouble sleeping | **1.52** (1.36–1.71) | Independent risk factor |
-| BMI (per unit) | **1.06** | Risk — ~6% higher odds per unit |
+| Vigorous activity | **0.74** (0.65–0.84) | Associated with lower odds — most robust modifiable finding |
+| Trouble sleeping | **1.52** (1.36–1.71) | Independently associated with higher odds |
+| BMI (per unit) | **1.06** | ~6% higher odds per unit |
 | Age (per year) | **1.06** | Dominant, compounds across decades |
 | Sleep *duration* | ≈ 1.00 (*p* > 0.8) | **Not** significant once age-adjusted |
 | Moderate activity | ≈ 1.00 (*p* > 0.8) | **Not** significant once age-adjusted |
@@ -40,11 +40,11 @@ Short sleep *length* and moderate activity looked important in the raw compariso
 
 **3. The pattern holds nationally.** Survey-weighted, the national hypertension rate comes out to **~50%** (95% CI ~47–52%), below the raw-sample 55% because NHANES over-samples higher-risk groups. The group gaps stay real: vigorous-active vs. inactive (≈33% vs ≈57%) and sleep-trouble vs. none (≈62% vs ≈44%) have non-overlapping confidence intervals.
 
-**4. The estimates hold up across methods.** The raw sample, the survey-weighted Python model, and R's design-based `survey` model land on the same point estimates (vigorous ≈ 0.68, sleep trouble ≈ 1.59, weight ≈ 1.08). R's confidence intervals come out a little wider, which is what you'd expect from proper survey linearization, but none of the conclusions change.
+**4. The estimates hold up across methods.** The unweighted and weighted models agree in direction and statistical conclusion, and the weighted Python model and R's design-based `survey` model match each other (vigorous ≈ 0.68, sleep trouble ≈ 1.59, weight ≈ 1.08). R's confidence intervals come out a little wider, which is what you'd expect from proper survey linearization, but none of the conclusions change.
 
 ## Recommendations
-- **Prioritize vigorous activity** in prevention messaging — it's the modifiable factor with the strongest age-independent protective association.
-- **Treat sleep *quality* (trouble sleeping), not just hours**, as a real risk factor.
+- **Prioritize vigorous activity** in prevention messaging — it's the modifiable factor with the strongest age-independent association with lower odds.
+- **Treat sleep *quality* (trouble sleeping), not just hours**, as associated with higher odds.
 - **Act before midlife** — age shows the steepest climb, so habit change earns the most when started early.
 
 ## Honest notes (data caveats)
